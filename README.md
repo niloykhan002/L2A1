@@ -28,4 +28,24 @@ type User = {
 };
 ```
 
-## How does TypeScript help in improving code quality and project maintainability?
+## What is the use of the keyof keyword in TypeScript?
+
+The keyof keyword in TypeScript is used to extract the keys of an object type as a union of string (or number) literal types.
+
+```ts
+type Person = {
+  name: string;
+  age: number;
+  isActive: boolean;
+};
+
+type PersonKeys = keyof Person;
+
+function getValue(obj: Person, key: keyof Person) {
+  return obj[key];
+}
+
+const user: Person = { name: "Jhankar", age: 42, isActive: true };
+
+getValue(user, "name"); // Output: Jhankar
+```

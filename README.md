@@ -32,6 +32,8 @@ type User = {
 
 The keyof keyword in TypeScript is used to extract the keys of an object type as a union of string (or number) literal types.
 
+## Example:
+
 ```ts
 type Person = {
   name: string;
